@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<!-- Kingsley Chimezie - C14468272 -->
+<html>
+    
+    <!----------------------------- HEAD ----------------------------->
+    <head>
+        <title>LAB TEST 1 - 07/10/16 </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="utf-8">
+        <meta name="author" content="Kingsley Chimezie">
+        
+        <script>
+			
+		</script>
+    </head>
+    
+
+    <!----------------------------- BODY ----------------------------->
+     <body>
+        
+        <div id="container">
+           <div id="header"> </div>
+           
+            
+            <div id="content">
+                <hr class="topHR">
+                <table width="200px" height="200px" style="margin:auto;" border="1px">
+                    
+                    
+                    <center><p id="startTime"></p></center>
+                   
+                   
+                    <!-- ROW 1 -->
+                    <tr>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                    </tr>
+                    
+                    
+                    <!-- ROW 2 -->
+                    <tr>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                    </tr>
+                    
+                    
+                    <!-- ROW 3 -->
+                    <tr>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                    </tr>
+                    
+                    
+                    <!-- ROW 4 -->
+                    <tr>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                        <td width="auto" style="margin:auto;">
+                            <button onclick="colorClicked()">Click</button>
+                        </td>
+                    </tr>
+               </table>
+               
+               <!--START CLICKED -->
+               <div id="btnStart">
+                   <button onclick="myTimer()" id="Start"> START! </button>
+                    <script>
+                        var colorClicked = '';
+                        function myTimer()
+                        {
+                            var d = new Date();
+                            var clickedAt = d.toLocaleTimeString(); 
+                            document.getElementById("startTime").innerHTML = "STARTED AT: " + clickedAt;
+                            document.getElementById('Start').style.visibility='hidden';
+                            
+                            var cells = document.getElementsByTagName('td'),
+                            colors = ['blue','red','green','orange','purple','pink','gray'];
+
+                            for(var i = 0; i < cells.length; i++)
+                            {
+                                cells[i].style.backgroundColor = '' + colors[Math.floor(Math.random() * colors.length)];
+                            }
+                        }
+                    </script>
+               </div>
+            
+                
+                <hr class="bottomHR">
+            </div><!-- end content -->
+            
+           <div id="footer"> </div>
+        </div>
+        
+        
+    </body>
+
+
+</html>
