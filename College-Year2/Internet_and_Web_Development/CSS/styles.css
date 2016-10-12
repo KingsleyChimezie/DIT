@@ -1,0 +1,279 @@
+/*  AUTHOR:         Kingsley Chimezie
+    STUDENT NO:     C14468272
+    DATE:           28/04/16
+*/
+
+
+
+/*--------------------------------------------------------- OTHERS */
+@charset "utf-8";
+
+@font-face
+{
+    font-family:    logoFont;
+    src: url(../fonts/fedservice.ttf);
+}
+
+
+/*--------------------------------------------------------- BODY */
+html, body
+{
+
+    width: 100%;   
+    margin: 0px;     
+    padding: 0px;
+    font-family: verdana;
+	background-size: cover;
+    background-position: center;
+    background-image: url(../IMAGES/backgrounds/BG14.jpg);
+}
+
+
+/*------------------------------------------------------- ROOF */
+#roof
+{
+    width: 100%;    
+    position: fixed;   
+    z-index: +1;     
+    height: 50px;
+    background-image: url(../IMAGES/backgrounds/BG1.jpg);
+    background-size: cover;
+}
+
+    /* HOME BUTTON */
+    #roofHome
+    {
+        width: 250px;
+        height:100%;
+        float: left;
+        background-image: url(../IMAGES/roofLeftsideBtn.png);
+        background-size: 100% 100%;
+    }
+    #roofHome:hover
+    {
+        background-image: url(../IMAGES/roofLeftsideBtnHover.png);
+    }
+
+    /* REGISTER BUTTON */
+    #regBtn
+    {
+        width: 100px;
+        height:60%;
+        margin: 10px 50px 10px 0;
+        float: right;
+        background-image: url(../IMAGES/registerBtn.png);
+        background-size: 100% 100%;
+    }
+    #regBtn:hover
+    {
+        background-image: url(../IMAGES/registerBtnHover.png);
+    }
+    
+    /* LOGIN BUTTON */
+    #loginBtn
+    {
+        width: 100px;
+        height:60%;
+        margin: 10px 25px 10px 0;
+        float: right;
+        background-image: url(../IMAGES/loginBtn.png);
+        background-size: 100% 100%;
+    }
+    #loginBtn:hover
+    {
+        background-image: url(../IMAGES/loginBtnHover.png);
+    }
+/*------------------------------------------------------- CONTAINER */
+#container
+{
+    
+    width: 1366px;
+    min-height: 100%;
+    padding-top: 120px;
+    margin: auto;
+/*    margin-bottom: 100px;*/
+    position: relative;
+}
+
+
+
+/*--------------------------------------------------------- HEADER */
+#header
+{
+
+    width: auto;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../IMAGES/backgrounds/myphoneIcon4.png);
+    background-color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+
+
+/*--------------------------------------------------------- MENU */
+#nav
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+    width: auto;
+    height: auto;
+    font-family: logoFont;
+    font-size: 20px;
+}
+
+
+#nav li
+{
+	float: left;
+	width: auto;
+    height: auto;
+	display: block;
+}
+
+
+#nav a:link, #nav a:visited 
+{
+    display:block;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-image: url(../IMAGES/backgrounds/BG2.jpg);
+    width: 341px;
+    height: auto;
+    text-align:center;
+    padding: 25px .5px 25px 0px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+
+#nav a:hover, #nav a:active 
+{
+    color: gold;
+    background-image: url(../IMAGES/backgrounds/BG12.jpg);
+}
+
+
+/*--------------------------------------------------------- CONTENT */
+#content 
+{
+
+    padding: 50px;
+    padding-bottom: 250px; /* Footer height */     
+    background-color: white;
+   
+}
+    /* main default content area for pages */
+    .area1
+    {
+        width: 100%;
+        padding: 20px 0 20px 0;
+        
+    }
+        /* This table is used on the following pages:
+           index.html, */
+        .introTable
+        {
+            margin: 50px auto 50px auto;
+            padding: 50px;
+            background-color: slategray;
+            color: azure;
+            width: 70%;
+            text-align-last: center;
+            font-size: 20px;
+        }
+
+        /* LOGIN PAGE STYLING */
+        #loginArea
+        {
+            margin: auto;
+            height: auto;
+            width: 50%;
+            padding: 25px;
+            color: slategray;
+            text-align: center;
+            font-size: 30px;
+        }
+            /* Links */
+            #loginArea a
+            {
+                color: slategray;
+                text-decoration: none;
+            }
+            #loginArea a:hover
+            {
+                color: goldenrod;
+            }
+
+            /* Input Boxes */
+            input
+            {
+                width: 100%;
+                padding: 20px 20px;
+                margin: 0px auto 50px auto;
+                box-sizing: border-box;
+                border-radius: 5px;
+                font-size: 20px;
+                color: cadetblue;
+            }
+            input:focus
+            {
+                border: 3px solid black;
+                color: goldenrod;
+            }
+            
+            /* Submit button */
+            input[type=submit]
+            {
+                width: 100%;
+                padding: 25px;
+                font-size: 30px;
+                font-family: logoFont;
+                color: gold;
+                background-image: url(../IMAGES/backgrounds/BG12.jpg);
+                background-size: 100% 100% 100% 100%;
+                cursor: pointer;
+            }
+
+
+/*--------------------------------------------------------- FOOTER */
+#footer 
+{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    height: 200px;
+    background-color: slategray;
+	background-image: url(../IMAGES/backgrounds/footer.png);
+    background-size: cover;
+}
+
+
+#back2topBtn
+{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-image: url(../IMAGES/go-to-top-button.png);
+    background-size: 100% 100%;
+}
+#back2topBtn:hover
+{
+    background-image: url(../IMAGES/go-to-top-button-hover.png);
+}
+
+
+
+/************************** CLASSES **************************/
+.pageLine
+{
+    width: 95%;
+    padding: 1px;
+    background-color:slategray;
+}

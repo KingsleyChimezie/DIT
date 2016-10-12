@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+
+
+<html>
+    
+    <!----------------------------- HEAD ----------------------------->
+    <head>
+        <meta name="author" content="Kingsley Chimezie">
+        <meta name="description" content="Internet App & Web Development Assignment 2016">
+        
+        <meta charset="utf-8">
+        <title> Homepage </title>
+        <link href="../CSS/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    
+    <!----------------------------- BODY ----------------------------->
+    <body>
+        
+        
+        <!------------------------------ Roof -->
+        <div id="roof">
+            <a href="index.html">
+                <div id="roofHome"></div>
+            </a>
+            
+            <a href="register.html">
+                <div id="regBtn"></div>
+            </a>
+            
+            <a href="login.html">
+                <div id="loginBtn"></div>
+            </a>
+        </div>
+        
+        <!------------------------------ Main Container -->
+        <div id="container"> 
+            
+            
+            
+        
+            <!---------------------------- nav area -->
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+
+
+            <!------------------------------ content area -->
+            <div id="content">
+                
+                <hr class="pageLine">
+                
+                
+                
+                <div class="area1">
+                <!--************************** UNIQUE CONTENT **************************-->
+                    <div id="loginArea">
+                        <img src="../IMAGES/userIcon.png" width="100px" height="100px">
+                        <br>
+                        
+                        <form action="../PHP/loginControl.php" method="post" accept-charset="utf-8">
+                           
+                            Username*:
+                            <input type="text" name="username" placeholder="Enter your usersname..." maxlength="25" required>
+                            
+                            Password*:
+                            <input type="password" name="password" placeholder="Enter your password..." maxlength="25" required>
+                            
+                            <input type="submit" value="Login">
+                        
+                        </form>
+                        
+                        <a href="forgotPass.html">Forgot Password?</a>
+                    </div>
+                <!--************************ END UNIQUE CONTENT ************************-->
+                </div>
+                
+                
+                
+                <hr class="pageLine">
+                
+            </div>
+            <!-- end content -->
+        
+        
+            <!------------------------------ footer area -->
+            <a href="http://kingsleychimezie.weebly.com/about.html" target="_blank">
+                <div id="footer">
+                
+                </div>
+                <!-- end footer -->
+            </a>
+            
+            
+        </div>
+        <!-- end container -->
+        
+        
+        <a href="#container">
+            <div id="back2topBtn"></div>
+        </a>
+        
+        
+    </body>
+</html>

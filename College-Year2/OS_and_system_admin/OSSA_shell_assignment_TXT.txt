@@ -1,0 +1,78 @@
+# KINGSLEY CHIMEZIE - C14468272 - ASSIGNMENT 7
+# DATE: 15/01/16
+
+while :
+	do
+		clear                                   # Clear previous display
+		echo =============== CHOOSE A MENU OPTION ===============
+		echo
+		echo (a)	Display username, date and time. 
+		echo (b)	Use vi or another editor to edit a file. 
+		echo (c)	Show your current shell, home directory, and operating system type. 
+		echo (d)	Show your current path setting and current working directory.
+		echo (e)	Show the number of users currently logged. 
+		echo (f)	Show the OS version, release number, and kernel version. 
+		echo (g)	Show the following:  CPU information, processor model name, speed, uptime
+		echo (h)	Display all the directories in PATH in an easy-to-read way, i.e., one line per directory. 
+		echo (i)	Display the information from the ls –l command in a more user-friendly way.
+		echo (j)	Display a summary of the disk space usage for each directory argument.
+		echo (k)	Exit 
+		echo
+ 		echo -n ENTER OPTION(a - k):		# User input
+ 		echo
+		read opt                                # Read user's input
+ 
+
+		case $opt in                            # Open the case function for corresponding option.
+   			a) echo "Your username : $(echo $USER)"
+   	   		echo "Current date and time : $(date)"                         # Shows username and date
+      			read enterKey;;                                                
+     
+   			b)  > newfile.txt
+       			vi newfile.txt
+       			cat newfile.txt                                                # Create and edit file
+       			read enterKey;;                                                # returns to menu
+      
+   c) echo Current Shell: $BASH
+      echo Home Directory: $HOME
+      echo Operating system type: $OSTYPE                              #Shows Current Shell,Home Directory and O.S type                    
+      read enterKey;;
+     
+   d) echo Curret Path Setting: $PATH
+      echo Current Working Directory: $PWD                             # Shows Current Path and Current Directory
+      read enterKey;;
+    
+   e) users                                                            # Shows users logged in
+      read enterKey;;
+  
+   f) echo OS version and release number:
+      uname -a                                                    
+      echo kernel version:                                             # Show the OS version, release number, and kernel version.
+      uname -r
+      read enterKey;;
+  
+   g) uptime
+      sudo dmidecode -t 4                                              # CPU information, processor model name, speed, uptime.
+      read enterKey;;                                                     
+  
+   h)  echo "${PATH//:/$'\n'}"                                         # Display all the directories in PATH
+      read enterKey;;
+      
+   i) select file in *;
+      do
+      grep 'directory' "$file"
+      break
+      done                                                              # Displays information from ls -l
+      read enterKey;;
+   
+   j) du -h                                                             # Displays summary of disk space
+      read enterKey;;
+  
+   k) exit 1;;                                                          # Exit Program
+  
+   *) echo "Invalid Entry. Please select option between a-k";
+      echo "Press enter to continue. . .";                              # Error checking(checks if character is valid) 
+      read enterKey;;
+
+			esac                                                                    # End Case
+done                        
