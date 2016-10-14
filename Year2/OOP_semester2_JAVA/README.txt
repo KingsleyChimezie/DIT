@@ -1,7 +1,7 @@
 Abusive Text detector - by Kingsley Chimezie
 ---------------------------------------------
 
-My program is intended to allows a user to check a text file 
+My program is intended to allow a user to check a text file 
 for any abusive words. The users text file is compared with
 a second text file containing a library of bad words. 
 any words found would be displayed.
