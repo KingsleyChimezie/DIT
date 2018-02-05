@@ -1,0 +1,118 @@
+<!-- Kingsley Chimezie - C14468272 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lab 3-4 | Problem 1</title>
+
+    <style>
+        input[type=text] {
+            font-size: 2em;
+            text-align: right;
+            border-radius: 5px;
+            width: 240px;
+            height: 35px;
+            margin-bottom: 10px;
+            padding: 1%;
+        }
+
+        button {
+            font-size: 1.1em;
+            border-radius: 5px;
+            width: 50px;
+        }
+
+        .flex-container {
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            text-align: center;
+            padding: .5em;
+            ;
+            font-size: 1em;
+            flex-grow: 1;
+            margin: 0 5px 5px 0;
+        }
+
+        #calculator {
+            width: 250px;
+            font-size: 100%;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Verdana;
+        }
+    </style>
+    
+</head>
+
+<body>
+  
+   <!-- SCRIPT FOR CALCULATOR FUNCTIONALITY -->
+    <script>
+        function c(val) {
+            document.getElementById("in").value = val;
+        }
+
+        function v(val) {
+            document.getElementById("in").value += val;
+        }
+
+        function plusMinus() {
+            window.alert("Function reachable, come back and work on this function"); 
+            
+            // MY MOCK PSEUDO CODE FOR THIS FUNCTION
+            /* 
+                if n is < 0, n is negative
+                    changing n to positive: n = (-n)*n  
+                else if n is > 0, n is positive
+                    changing n to negative: n = n*(-n)
+            */
+            
+        }
+
+        function e() {
+            try {
+                c(eval(document.getElementById("in").value));
+            } catch (e) {
+                c('Error')
+            }
+        }
+    </script>
+    
+    <div id="calculator">
+        <input id="in" type="text" readonly="readonly" placeholder="0">
+        <div class="flex-container">
+            <button class="flex-item" onclick='v("(")'>(</button>
+            <button class="flex-item" onclick='v(")")'>)</button>
+            <button class="flex-item" onclick='plusMinus()'>±</button>
+            <button class="flex-item" onclick='v("/")'>÷</button>
+            <button class="flex-item" onclick='v("7")'>7</button>
+            <button class="flex-item" onclick='v("8")'>8</button>
+            <button class="flex-item" onclick='v("9")'>9</button>
+            <button class="flex-item" onclick='v("*")'>x</button>
+            <button class="flex-item" onclick='v("4")'>4</button>
+            <button class="flex-item" onclick='v("5")'>5</button>
+            <button class="flex-item" onclick='v("6")'>6</button>
+            <button class="flex-item" onclick='v("7-")'>-</button>
+            <button class="flex-item" onclick='v("1")'>1</button>
+            <button class="flex-item" onclick='v("2")'>2</button>
+            <button class="flex-item" onclick='v("3")'>3</button>
+            <button class="flex-item" onclick='v("+")'>+</button>
+            <button class="flex-item" onclick='v("0")'>0</button>
+            <button class="flex-item" onclick='v(".")'>.</button>
+            <button class="flex-item" onclick='c("")'>C</button>
+            <button class="flex-item" onclick='e()'>=</button>
+        </div>
+    </div>
+</body>
+
+</html>

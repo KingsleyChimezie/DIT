@@ -1,0 +1,29 @@
+{
+<<<<<<< HEAD
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "Rich Web Technology Lab 5",
+=======
+  "name": "lab 3",
+  "version": "1.0.0",
+  "description": "Rich Web Technology Lab 3",
+>>>>>>> 6f2c577df7ebd91cd9c68d0b1fab03417f0fff6e
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server --port=8000"
+  },
+<<<<<<< HEAD
+  "author": "Charlie Chen",
+  "license": "MIT",
+=======
+>>>>>>> 6f2c577df7ebd91cd9c68d0b1fab03417f0fff6e
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "rxjs": "^5.0.0-beta.12"
+  }
+}

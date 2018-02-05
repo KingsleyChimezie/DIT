@@ -1,0 +1,96 @@
+<!-- Kingsley Chimezie - C14468272 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3-4 | Problem 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="w3-row">
+        <!-- COLUMN 1: ACCORDIONS FOR PROBLEMS SOLUTION DISPLAY -->
+        <div class="w3-col w3-container w3-xlarge" style="width:60%">
+            <!-- Problem 1 -->
+            <button onclick="myFunction('P1')" class="w3-button w3-blue w3-block w3-left-align">
+                &#x25BC; (1) Build an array of all user name strings
+            </button>
+            <div id="P1" class="w3-container w3-hide w3-large w3-border">
+                <p>Solution...</p>
+            </div>
+
+            <!-- Problem 2 -->
+            <button onclick="myFunction('P2')" class="w3-button w3-blue w3-block w3-left-align">
+                &#x25BC; (2) Extract an array of geo objects having the form { lat: -68.6102, lng: -47.0653 }
+            </button>
+            <div id="P2" class="w3-container w3-hide w3-large w3-border">
+                <p>Solution...</p>
+            </div>
+
+            <!-- Problem 3 -->
+            <button onclick="myFunction('P3')" class="w3-button w3-blue w3-block w3-left-align">
+                &#x25BC; (3) For each user, build an array having (in the order given) the following properties...
+
+            </button>
+            <div id="P3" class="w3-container w3-hide w3-large w3-border">
+                <p>Solution...</p>
+            </div>
+
+            <!-- Problem 4 -->
+            <button onclick="myFunction('P4')" class="w3-button w3-blue w3-block w3-left-align">
+                &#x25BC; (4) Build an array of address street names for which the zipcode starts with the digit 5
+            </button>
+            <div id="P4" class="w3-container w3-hide w3-large w3-border">
+                <p>Solution...</p>
+            </div>
+
+            <!-- Problem 5 -->
+            <button onclick="myFunction('P5')" class="w3-button w3-blue w3-block w3-left-align">
+                &#x25BC; (5) Get the product of all of the user ids
+            </button>
+            <div id="P5" class="w3-container w3-hide w3-large w3-border">
+                <p>Solution...</p>
+            </div>
+
+        </div>
+
+        <!-- COLUMN 2: display of full JSON content for reference -->
+        <div class="w3-col w3-container w3-xlarge" style="width:40%">
+            <button onclick="myFunction('JSON')" class="w3-button w3-blue w3-block w3-left-align w3-show">
+                &#x25BC; View full JSON content
+            </button>
+            <div id="JSON" class="w3-container w3-hide w3-large w3-border">
+                <p>full JSON content...</p>
+                <div id="JSONcontent"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ACCORDIONS SCRIPT -->
+    <script>
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <script>
+        var json = $.getJSON("problem2.json",
+            function(response, status, jqXHR) {
+                console.log(jqXHR.responseText); 
+                document.getElementById("JSONcontent").innerHTML = jqXHR.responseText;
+            }
+        );
+    </script>
+</body>
+
+</html>

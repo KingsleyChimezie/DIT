@@ -1,0 +1,107 @@
+<!-- KINGSLEY CHIMEZIE - C14468272 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rich Web Problem 2 - Calulator</title>
+    
+    <style>
+        .CalArea {
+            
+            height: 300px;
+            width: 300px;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+            position: relative;
+            top: 80px;
+            left: 40%;
+        }
+
+        .display {
+            
+            border-style: solid;
+            border-color: lightgrey;
+            border-width: 2px;
+            border-radius: 5px;
+            width: 270px;
+            position: relative;
+            left: 15px;
+            top: 20px;
+            height: 40px;
+        }
+
+        .display input {
+            position: relative;
+            border: none;
+            left: 3px;
+            top: 3px;
+            height: 30px;
+            font-size: 21px;
+            text-align: right;
+            width: 261px;
+        }
+
+        .keys {
+            position: relative;
+            top: 15px;
+        }
+
+        .button {
+            width: 54px;
+            height: 30px;
+            border: none;
+            border-radius: 8px;
+            margin-left: 17px;
+            cursor: pointer;
+            border-top: 2px solid transparent;
+        }
+
+        .button.gray {
+            color: white;
+            background-color: #6f6f6f;
+            border-bottom: black 2px solid;
+            border-top: 2px #6f6f6f solid;
+        }
+
+        .button.blue {
+            color: black;
+            background-color: lightskyblue;
+            border-bottom: black 2px solid;
+        }
+        p {
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <body>
+        <div class="CalArea">
+            <div class="display">
+                <input type="text" placeholder="0">
+            </div>
+            <div class="keys">
+                <p>
+                    <input type="button" class="button gray" value="("><input type="button" class="button gray" value=")"><input type="button" class="button gray" value="&#177"><input type="button" class="button blue" value="&#247;">
+                </p>
+                <p>
+                    <input type="button" class="button gray" value="7"><input type="button" class="button gray" value="8"><input type="button" class="button gray" value="9" ><input type="button" class="button blue" value="x" >
+                </p>
+                <p>
+                    <input type="button" class="button gray" value="4"><input type="button" class="button gray" value="5"><input type="button" class="button gray" value="6" ><input type="button" class="button blue" value="-" >
+                </p>
+                <p>
+                    <input type="button" class="button gray" value="1"><input type="button" class="button gray" value="2" ><input type="button" class="button gray" value="3" ><input type="button" class="button blue" value="+" >
+                </p>
+                <p>
+                    <input type="button" class="button gray" value="0"><input type="button" class="button gray" value="."><input type="button" class="button gray" value="C"><input type="button" class="button gray" value="=">
+                </p>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
